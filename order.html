@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GSMS - Orders</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg">
+
+    <!-- Order Header -->
+    <div class="card">
+        <div class="c-title">
+            <h1 class="card-title">New Order</h1>
+            <input class="c-name" id="customerName" type="text" placeholder="Customer Name">
+        </div>
+
+        <!-- Column Labels -->
+        <div class="card-body">
+            <div><label>Product</label></div>
+            <div><label>Price</label></div>
+            <div><label>Quantity</label></div>
+            <div><label>Total</label></div>
+            <div>
+                <button type="button" class="addmore-button" id="addMoreButton">
+                    Add More
+                </button>
+            </div>
+        </div>
+
+        <div id="itemsInOrder"></div>
+    </div>
+
+    <!-- Product Rows will be added here -->
+
+    <!-- Product Row Template -->
+    <template id="productRowTemplate">
+        <div class="product-row">
+
+            <select class="cart-product">
+                <option value="">--Select Product--</option>
+            </select>
+
+            <input type="number" class="product-price" value="0.00" readonly>
+
+            <input type="number" class="product-qty" value="1" min="1">
+
+            <input type="number" class="product-total" value="0.00" readonly>
+
+            <button type="button" class="remove-row">
+                Remove
+            </button>
+
+        </div>
+    </template>
+
+    <!-- Grand Total -->
+    <div class="card">
+        <div class="card-total">
+            <div>
+                <label>Grand Total:</label>
+            </div>
+            <div>
+                <input id="grandTotal" class="grandTotal" type="number" value="0.00" readonly>
+            </div>
+            <div>
+                <button type="button" class="totalsave-button" id="saveOrder">
+                    Save
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/order.js"></script>
+
+</body>
+
+</html>

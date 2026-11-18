@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GSMS - Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg">
+
+
+    <div class="card">
+
+        <div class="c-title">
+            <h1 class="card-title">Grocery Store Management System</h1>
+        </div>
+
+        <div class="dashboard-buttons">
+            <a href="order.html" class="dashboard-button">
+                New Order
+            </a>
+
+            <a href="manage-product.html" class="dashboard-button">
+                Manage Products
+            </a>
+        </div>
+
+        <div class="dashboard-table-container">
+
+            <table class="order-table">
+
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Order Number</th>
+                        <th>Customer Name</th>
+                        <th>Total Cost</th>
+                    </tr>
+                </thead>
+
+                <tbody id="ordersTableBody">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

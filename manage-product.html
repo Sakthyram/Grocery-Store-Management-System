@@ -1,38 +1,116 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>GSMS - Product Management</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="bg">
-    <div class="card">
-        <h1 class="card-title">Products</h1>
-        <button type="button" class="addbutton" id="openModal">Add Product</button>
 
+    <div class="app-layout">
 
-        <table class="table" id="table">
-            <thead class="table">
-                <tr>
-                    <th class="table">Name</th>
-                    <th class="table">Unit</th>
-                    <th class="table">Price Per Unit</th>
-                    <th class="table">Action</th>
-                </tr>
-            </thead>
+        <!-- Sidebar -->
+        <aside class="sidebar">
 
-            <tbody>
-                <!-- Product rows will go here -->
-            </tbody>
-        </table>
+            <div class="sidebar-brand">
+                <svg viewBox="0 0 24 24" width="30" height="30"
+                    fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9h18l-2 11H5L3 9Z"/>
+                    <path d="M8 9l4-6 4 6"/>
+                    <path d="M9 13v3M15 13v3"/>
+                </svg>
+                <h2>GSMS</h2>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="index.html" class="nav-link">
+                    <svg viewBox="0 0 24 24" width="20" height="20"
+                        fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="7" height="9" rx="1"/>
+                        <rect x="14" y="3" width="7" height="5" rx="1"/>
+                        <rect x="14" y="12" width="7" height="9" rx="1"/>
+                        <rect x="3" y="16" width="7" height="5" rx="1"/>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="manage-product.html" class="nav-link active"
+                    aria-current="page">
+                    <svg viewBox="0 0 24 24" width="20" height="20"
+                        fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m21 8-9-5-9 5 9 5 9-5Z"/>
+                        <path d="m3 8v8l9 5 9-5V8"/>
+                        <path d="m12 13v8"/>
+                    </svg>
+                    <span>Manage Products</span>
+                </a>
+
+                <a href="order.html" class="nav-link">
+                    <svg viewBox="0 0 24 24" width="20" height="20"
+                        fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"/>
+                        <circle cx="20" cy="21" r="1"/>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                    </svg>
+                    <span>New Order</span>
+                </a>
+
+            </nav>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <div class="card">
+
+                <h1 class="card-title">Products</h1>
+
+                <button type="button" class="addbutton" id="openModal">
+                    Add Product
+                </button>
+
+                <div class="dashboard-table-container">
+
+                    <table class="table" id="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Unit</th>
+                                <th>Price Per Unit</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <!-- Product rows will go here -->
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+        </main>
+
     </div>
 
+    <!-- Product Modal -->
     <div class="modal-backdrop" id="productModal">
         <div class="modal">
             <h2>Add Product</h2>
 
             <form id="productForm">
+
                 <label for="productName">Name:</label>
                 <input type="text" id="productName" name="productName">
 
@@ -43,13 +121,23 @@
                 </select>
 
                 <label for="productPrice">Price Per Unit:</label>
-                <input type="number" id="productPrice" name="productPrice" step="0.01" min="0">
+                <input type="number" id="productPrice" name="productPrice"
+                    step="0.01" min="0">
 
-                <button type="button" class="savebutton" id="saveProduct">Save Product</button> <button type="button" class="cancelbutton" id="closeModal">Cancel</button>
+                <button type="button" class="savebutton" id="saveProduct">
+                    Save Product
+                </button>
+
+                <button type="button" class="cancelbutton" id="closeModal">
+                    Cancel
+                </button>
+
             </form>
         </div>
     </div>
+
     <script src="js/javascript.js"></script>
+
 </body>
 
 </html>

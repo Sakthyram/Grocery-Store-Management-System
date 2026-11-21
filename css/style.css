@@ -15,9 +15,15 @@
     margin: 20px auto;
 }
 
+/* Consistent card heading and table alignment */
+
 .card-title {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.dashboard-table-container {
+    padding: 10px 20px 20px;
 }
 
 .addbutton {
@@ -26,7 +32,7 @@
     border-radius: 10px;
     width: 15%;
     padding: 10px;
-    margin-left: 85%;
+    margin-left: 83.5%;
     cursor: pointer;
 }
 
@@ -152,12 +158,6 @@ td {
     cursor: pointer;
 }
 
-.card-total {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 15px;
-}
 
 .totalsave-button {
     background-color: mediumseagreen;
@@ -259,3 +259,176 @@ td {
 .order-table tbody tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+
+
+/* ===== Application Layout ===== */
+
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ===== Sidebar ===== */
+
+.sidebar {
+    width: 240px;
+    min-width: 240px;
+    background-color: #1e293b;
+    color: white;
+    padding: 25px 15px;
+    box-sizing: border-box;
+}
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 12px 30px;
+    border-bottom: 1px solid #334155;
+}
+
+.sidebar-brand h2 {
+    margin: 0;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 25px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 12px;
+    color: #cbd5e1;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-link:hover {
+    background-color: #334155;
+    color: white;
+}
+
+.nav-link.active {
+    background-color: #2878d0;
+    color: white;
+}
+
+/* ===== Main Content ===== */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.main-content .card {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+/* ===== Responsive Layout ===== */
+
+@media (max-width: 650px) {
+
+    .app-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        padding: 15px;
+    }
+
+    .sidebar-brand {
+        padding-bottom: 15px;
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 15px;
+    }
+
+    .nav-link {
+        flex: 1;
+        justify-content: center;
+        font-size: 13px;
+        gap: 6px;
+        padding: 10px 6px;
+    }
+
+    .nav-link svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+}
+
+/* Product management table */
+
+.main-content .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.main-content .table th,
+.main-content .table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.main-content .table th {
+    background-color: #333;
+    color: white;
+}
+
+
+
+/* Order page grand total alignment */
+
+.main-content .card + .card {
+    margin-top: 20px;
+}
+
+.card-total {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr auto;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+}
+
+.grand-total-label {
+    grid-column: 3;
+    text-align: right;
+}
+
+.grand-total-value {
+    grid-column: 4;
+}
+
+.grand-total-action {
+    grid-column: 5;
+}
+
+.grand-total-value .grandTotal {
+    width: 93.5%;
+    margin-right: 205px;
+}
+

@@ -6,6 +6,18 @@ The application helps manage grocery products, create customer orders, calculate
 
 ## Features
 
+## Screenshots
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Manage Products
+![Manage Products](screenshots/manage-product.png)
+
+### New Order
+![New Order](screenshots/new-order.png)
+
+
 ### Product Management
 - Add new products.
 - View available products.

@@ -5,6 +5,7 @@ const saveButton = document.getElementById('saveProduct')
 
 openButton.addEventListener('click', function () {
     modal.style.display = 'flex';
+    document.getElementById('productForm').reset();
 });
 
 closeButton.addEventListener('click', function () {
